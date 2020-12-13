@@ -1,6 +1,7 @@
 .Ending {
   background-color: #4d5eff;
-
+background-image: url('../../assets/images/cute.jpg');
+background-size: contain;
   .ending-container {
     display: flex;
     flex-direction: column;
@@ -9,8 +10,10 @@
 
     h2 {
       margin: 0;
+      background-color: aqua;
+      border-radius: 3%;
       text-align: center;
-      color: #fff;
+      color: darkblue;
       font-size: 1.5rem;
       line-height: 1.25;
       font-weight: bold;
@@ -28,14 +31,14 @@
       transition-timing-function: ease-in-out;
       padding: 1rem;
       width: 100%;
-      color: #4d5eff;
+      color: white;
       font-weight: bold;
-      background-color: #fff;
+      background-color: #4d5eff;
       border-radius: 50px;
     }
 
     a:hover {
-      background-color: #dae0fe;
+      background-color: darkblue;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 

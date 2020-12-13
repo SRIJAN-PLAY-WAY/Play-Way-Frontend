@@ -1,8 +1,7 @@
 .about-top {
   // Mobile styles
-
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../../../../assets/about/about-header-mobile.jpg');
+  url('../../../../assets/images/kids.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -13,14 +12,15 @@
   }
 
   h1 {
-    margin: 0 auto 12.5%;
-
+    margin: 1rem auto 12.5%;
     color: #fff;
     font-family: 'Raleway', sans-serif;
     font-size: 2.25rem;
-    font-weight: 400;
+    font-weight: bolder;
     text-align: center;
-
+    background-color: crimson;
+    padding: 1rem;
+    border-radius: 3%;
     // 352px (Small phones)
     @media screen and (max-width: 22rem) {
       font-size: 1.75rem;
@@ -50,7 +50,7 @@
   }
 
   .about-join-button:hover {
-    background-color: #5767fe;
+    background-color:darkblue;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
@@ -62,7 +62,7 @@
   // Small landscape phones
   @media screen and (orientation: landscape) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url('../../../../assets/about/about-header-desktop.jpg');
+    url('../../../../assets/images/kids.jpg');
 
     .about-top-container {
       padding: 5vw 6.25vw;
@@ -87,7 +87,7 @@
   // Landscape and tablet optimized layout
   @media screen and (min-width: 43.75rem) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url('../../../../assets/about/about-header-desktop.jpg');
+    url('../../../../assets/images/kids.jpg');
 
     h1 {
       margin-bottom: 7.5%;
@@ -104,7 +104,7 @@
     // Large landscape phones
     @media screen and (orientation: landscape) {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url('../../../../assets/about/about-header-desktop.jpg');
+      url('../../../../assets/images/kids.jpg');
       padding: 0;
 
       .about-top-container {

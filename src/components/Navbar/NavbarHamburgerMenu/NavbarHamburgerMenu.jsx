@@ -3,7 +3,7 @@ import { slide as Menu } from 'react-burger-menu';
 import { NavbarHamburgerMenuContext } from './NavbarHamburgerMenuContext';
 import './NavbarHamburgerMenu.scss';
 import { Link } from 'react-router-dom';
-import logo from 'assets/logo.png';
+import logo from 'assets/images/2.jpeg';
 
 const NavbarHamburgerMenu = () => {
   const context = useContext(NavbarHamburgerMenuContext);
@@ -23,7 +23,7 @@ const NavbarHamburgerMenu = () => {
               <Link to="/" onClick={context.toggleMenu}>
                 <img src={logo} alt="Brooklyn College Computer Science Club" />
                 <p>
-                  Brooklyn College <br /> Computer Science Club
+                 Srijan Play Way <br /> 
                 </p>
               </Link>
             </div>
@@ -54,13 +54,13 @@ const NavbarHamburgerMenu = () => {
               </Link>
             </li>
             <li>
-              <Link to="/resources" onClick={context.toggleMenu}>
-                Resources
+              <Link to="/notices" onClick={context.toggleMenu}>
+                Notices
               </Link>
             </li>
             <li>
-              <Link to="/contribute" onClick={context.toggleMenu}>
-                Contribute
+              <Link to="/gallery" onClick={context.toggleMenu}>
+                Gallery
               </Link>
             </li>
             <li>
@@ -76,7 +76,7 @@ const NavbarHamburgerMenu = () => {
           to="/join"
           onClick={context.toggleMenu}
         >
-          Join the Club
+          Join the School
         </Link>
       </Menu>
     </div>

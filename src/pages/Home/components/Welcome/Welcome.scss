@@ -7,6 +7,10 @@ section.Welcome {
 
   .welcome-background-container {
     background-color: #f8eeff;
+    background-image: url('../../../../assets/images/crayon.png');
+    background-size: contain;
+    background-position-x: right;
+    background-repeat: no-repeat;
     padding: 6.25vw 0;
   }
 
@@ -26,14 +30,13 @@ section.Welcome {
         margin: 0;
         font-size: 1.875rem;
         font-family: 'Raleway', sans-serif;
-
+        background-size: cover;
         .SloganBeginning {
           #welcome-typewriter-placeholder {
-            font-weight: bold;
+            font-weight: bolder;
           }
-
-          font-size: inherit;
-          font-weight: 400;
+          font-size: 3rem;
+          font-weight: bolder;
         }
 
         .Typewriter {
@@ -78,7 +81,7 @@ section.Welcome {
         }
 
         a.join-button:hover {
-          background-color: #5767fe;
+          background-color: darkblue;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
@@ -97,7 +100,7 @@ section.Welcome {
         }
 
         a.learn-more:hover {
-          box-shadow: 0 0 0 3px #4d5eff inset;
+          box-shadow: 0 0 0 3px darkblue inset;
         }
 
         a.learn-more:active {
@@ -107,11 +110,11 @@ section.Welcome {
     }
 
     .welcome-slideshow {
-      margin-top: 2rem;
-      max-width: 87.5vw;
-
+      margin-top: 1rem;
+      max-width: 70vw;
+    
       img {
-        height: auto;
+        max-height: 35vw;
         width: 100%;
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
         border-radius: 10px;

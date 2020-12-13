@@ -9,6 +9,9 @@ nav.navbar-main {
   left: 50%;
   transform: translate(-50%, 0);
   background-color: #fff;
+  background-image: url('../../assets/images/cloud.jpg');
+  background-size: contain;
+  border-bottom:4px dashed aqua;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 
   .navbar-main-items {
@@ -69,6 +72,14 @@ nav.navbar-main {
       }
 
       // Logo area
+      .nav-logo{
+        padding: 0.4rem;
+        background-color:#4d5eff;
+        border-radius: 2%;
+      }
+      .nav-logo:hover{
+        background-color: darkblue;
+      }
       .nav-logo a {
         img {
           height: 3rem;
@@ -79,6 +90,8 @@ nav.navbar-main {
           margin: 0 0 0 1rem;
           font-size: 1rem;
           line-height: 1.25;
+          color:white;
+          font-weight: bolder;
         }
       }
 
@@ -97,17 +110,18 @@ nav.navbar-main {
             list-style: none;
 
             a {
-              font-size: 1rem;
-              color: #000;
+              font-size: 1.2rem;
+              color: darkblue;
               padding: 0 0.75rem;
               margin: 0 0.25rem;
               text-decoration: none;
               transition: 0.1s;
+              font-weight: bold;
               transition-timing-function: ease;
             }
 
             a:hover {
-              color: #4053fe;
+              color: red;
             }
           }
 
@@ -126,7 +140,7 @@ nav.navbar-main {
             }
 
             a:hover {
-              background-color: #4d5eff;
+              background-color: darkblue;
               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             }
 

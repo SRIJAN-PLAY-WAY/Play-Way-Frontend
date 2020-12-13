@@ -4,11 +4,11 @@ import { Route, Switch } from 'react-router-dom';
 import Home from 'pages/Home';
 import About from 'pages/About';
 import Events from 'pages/Events';
-import Resources from 'pages/Resources';
+import Notices from 'pages/Notices';
 import Join from 'pages/Join';
 import WelcomeJoin from 'pages/WelcomeJoin';
 import EventPage from 'pages/EventPage';
-import Contribute from 'pages/Contribute';
+import Gallery from 'pages/Gallery';
 import Contact from 'pages/Contact';
 
 const Routes = () => {
@@ -20,8 +20,8 @@ const Routes = () => {
       <Route path="/join">
         <Join />
       </Route>
-      <Route path="/resources">
-        <Resources />
+      <Route path="/notices">
+        <Notices />
       </Route>
       <Route path="/events/:id">
         <EventPage />
@@ -29,8 +29,8 @@ const Routes = () => {
       <Route path="/events">
         <Events />
       </Route>
-      <Route path="/contribute">
-        <Contribute />
+      <Route path="/gallery">
+        <Gallery />
       </Route>
       <Route path="/contact">
         <Contact />

@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { NavbarHamburgerMenuContext } from './NavbarHamburgerMenu/NavbarHamburgerMenuContext';
 import './Navbar.scss';
-import logo from 'assets/logo.png';
+import logo from 'assets/images/2.jpeg';
 
 const Navigation = () => {
   const context = useContext(NavbarHamburgerMenuContext);
@@ -16,7 +16,7 @@ const Navigation = () => {
             <img src={logo} alt="Logo" />
             {/* eslint-disable-next-line */}
             <p role="text">
-              Brooklyn College <br /> Computer Science Club
+              Srijan Play Way <br /> 
             </p>
           </Link>
         </div>
@@ -31,17 +31,17 @@ const Navigation = () => {
               <Link to="/events">Events</Link>
             </li>
             <li>
-              <Link to="/resources">Resources</Link>
+              <Link to="/notices">Notices</Link>
             </li>
             <li>
-              <Link to="/contribute">Contribute</Link>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
             </li>
 
             <li className="join-button">
-              <Link to="/join">Join the Club</Link>
+              <Link to="/join">Join the School</Link>
             </li>
           </ul>
         </nav>

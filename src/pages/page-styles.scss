@@ -1,3 +1,7 @@
+.gallerybg{
+  background-image: url('../assets/images/space.png');
+  background-size: contain;
+}
 .page-styles {
   margin: 0 auto;
   padding: 8vw;
@@ -15,8 +19,12 @@
   h2 {
     font-family: 'Raleway', sans-serif;
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2.5vh;
+    font-size: 3.2rem;
+    margin-bottom: 2vh;
+    font-weight: bolder;
+    color: darkblue;
+    background-color:aqua;
+    border-radius: 3%;
   }
 
   p {

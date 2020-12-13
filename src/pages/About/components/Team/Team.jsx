@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import TeamMember from './TeamMember';
 import './Team.scss';
 
-import logo from 'assets/logo.png';
-import kevinImage from 'assets/about/team-members/2020-2021/kevin.jpg';
-import dennisImage from 'assets/about/team-members/2020-2021/dennis.jpg';
+import logo from 'assets/images/2.jpeg';
+import kevinImage from 'assets/images/2.jpeg';
+import dennisImage from 'assets/images/2.jpeg';
 
-import shahzodaImage from 'assets/about/team-members/2019-2020/shahzoda.jpg';
-import vincentImage from 'assets/about/team-members/2019-2020/vincent.jpg';
-import rohmaImage from 'assets/about/team-members/2019-2020/rohma.jpg';
-import tylerImage from 'assets/about/team-members/2019-2020/tyler.jpg';
-import siamImage from 'assets/about/team-members/2019-2020/siam.jpg';
+import shahzodaImage from 'assets/images/2.jpeg';
+import vincentImage from 'assets/images/2.jpeg';
+import rohmaImage from 'assets/images/2.jpeg';
+import tylerImage from 'assets/images/2.jpeg';
+import siamImage from 'assets/images/2.jpeg';
 
 const Team = () => {
   return (
@@ -127,7 +127,7 @@ const Team = () => {
         </div>
       </section>
 
-      <article className="about-team-join">
+     {/*  <article className="about-team-join">
         <p>
           Interested in joining the team? We&apos;re currently looking for
           volunteers to help out with the club!&nbsp;
@@ -135,7 +135,7 @@ const Team = () => {
             Click here to learn more about our open positions and to apply now.
           </Link>
         </p>
-      </article>
+      </article> */}
     </section>
   );
 };

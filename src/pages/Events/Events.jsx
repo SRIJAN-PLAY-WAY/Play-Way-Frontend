@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Event from './components/Event';
+import Ending from '../../components/Ending'
 import '../page-styles.scss';
 import './Events.scss';
 import { useEffect } from 'react';
@@ -31,6 +32,7 @@ const Events = () => {
   }, []);
 
   return (
+    <div className="eventbg">
     <div className="page-styles Events">
       {/* Fix footer flashing in while events are loading */}
       {!eventsAreDownloaded && (
@@ -55,6 +57,8 @@ const Events = () => {
           {eventsAreDownloaded && pastEvents.map((event) => createEvent(event))}
         </section>
       </section>
+    </div>
+    <Ending />
     </div>
   );
 };

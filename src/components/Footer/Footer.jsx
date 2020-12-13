@@ -29,8 +29,8 @@ const FooterContents = () => {
     // < 700px (Vertical phones and small horizontal phones)
     return (
       <div className="footer-container">
-        <p>© 2020 Brooklyn College Computer Science Club</p>
-        <p>0317 Ingersoll Hall, Brooklyn College</p>
+        <p>© 2020 SRIJAN PLAY WAY</p>
+        <p>OBRA,SONBHADRA,UTTAR PRADESH</p>
         <p>
           <a href="mailto:contact@bccompsci.club">
             Email: contact@bccompsci.club
@@ -42,9 +42,9 @@ const FooterContents = () => {
     // > 700px (Desktops, laptops, tablets, and large horizontal phones)
     return (
       <div className="footer-container">
-        <p>© 2020 Brooklyn College Computer Science Club</p>
+        <p>© 2020 SRIJAN PLAY WAY</p>
         <p>
-          0317 Ingersoll Hall, Brooklyn College •{' '}
+        OBRA,SONBHADRA,UTTAR PRADESH •{' '}
           <a href="mailto:contact@bccompsci.club">
             Email: contact@bccompsci.club
           </a>

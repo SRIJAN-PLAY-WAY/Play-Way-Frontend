@@ -8,7 +8,7 @@ const Ending = ({ width }) => {
     <section className="Ending">
       <div className="ending-container">
         <EndingText width={width} />
-        <Link to="/join">Join the Club</Link>
+        <Link to="/join">Join the School</Link>
       </div>
     </section>
   );
@@ -19,8 +19,7 @@ const EndingText = ({ width }) => {
     // Vertical phones
     return (
       <h2>
-        Unlock your full potential at the Brooklyn College Computer Science
-        Club.
+        Unlock your child's full potential at Srijan Play Way.
       </h2>
     );
   } else {
@@ -28,9 +27,9 @@ const EndingText = ({ width }) => {
     return (
       // eslint-disable-next-line
       <h2 role="text">
-        Unlock your full potential at the
+        Unlock your child's full potential at 
         <br />
-        Brooklyn College Computer Science Club.
+        Srijan Play Way.
       </h2>
     );
   }

@@ -2,9 +2,9 @@ import React from 'react';
 import Activity from './Activity';
 import HackathonActivity from './HackathonActivity';
 import './WhatWeDo.scss';
-import skillUpImage from 'assets/about/activities/skill-up.jpg';
-import hackathonImage from 'assets/about/activities/hackathon.jpg';
-import collaborateBuildConquerImage from 'assets/about/activities/collaborate-build-conquer.jpg';
+import skillUpImage from 'assets/images/abc.jpg';
+import hackathonImage from 'assets/images/book.jpg';
+import collaborateBuildConquerImage from 'assets/images/playing.png';
 
 const WhatWeDo = () => {
   return (

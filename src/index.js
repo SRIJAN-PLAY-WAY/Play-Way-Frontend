@@ -12,6 +12,8 @@ import Footer from 'components/Footer';
 import ScrollToTop from 'components/ScrollToTop';
 import NavbarHamburgerMenu from './components/Navbar/NavbarHamburgerMenu';
 import { NavbarHamburgerMenuProvider } from './components/Navbar/NavbarHamburgerMenu/NavbarHamburgerMenuContext';
+import { LoaderProvider, useLoading, BallTriangle } from '@agney/react-loading';
+import { Lines,Planets } from 'react-preloaders';
 
 import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -38,6 +40,7 @@ const page = (
         <Footer />
       </footer>
     </Router>
+    <Planets color="#100E17" time="1000" background="linear-gradient(to right,#5579FB,#D2E7EE,#6DD5FA)"/>
   </React.StrictMode>
 );
 

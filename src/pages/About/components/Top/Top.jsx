@@ -8,7 +8,7 @@ const Top = () => {
       <div className="about-top-container">
         <h1>Together, we make magic happen.</h1>
         <Link to="/join" className="about-join-button">
-          Join the Club
+          Join the School
         </Link>
       </div>
     </section>

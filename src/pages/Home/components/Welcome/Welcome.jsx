@@ -3,34 +3,34 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import './Welcome.scss';
-import slideshow from 'assets/home/welcome-slideshow/inspiration.jpg';
+import slideshow from 'assets/images/7.jpeg';
 
 const Welcome = (props) => {
   return (
     <section className="Welcome">
       <div className="welcome-background-container">
         <div className="welcome-container">
+        <div className="welcome-slideshow">
+            <img className="slideshow" src={slideshow} alt="Slideshow" />
+          </div>
           <div className="welcome-content">
             <Slogan width={props.width} />
-            <p className="welcome-description">
+            {/* <p className="welcome-description">
               Learn something new at an event, form a team to build a project
               with, or find out more about the field! The Brooklyn College
               Computer Science Club welcomes you, regardless of your programming
               experience or major.
-            </p>
+            </p> */}
             <div className="welcome-action-buttons">
               <Link className="join-button" to="/join">
-                Join&nbsp;the&nbsp;Club
+                Join&nbsp;the&nbsp;School
               </Link>
-              <Link className="learn-more" to="/about">
+            {/*   <Link className="learn-more" to="/about">
                 Learn More
-              </Link>
+              </Link> */}
             </div>
           </div>
 
-          <div className="welcome-slideshow">
-            <img className="slideshow" src={slideshow} alt="Slideshow" />
-          </div>
         </div>
       </div>
     </section>
@@ -44,7 +44,8 @@ const Slogan = (props) => {
       // eslint-disable-next-line
       <span className="Slogan" role="text">
         <h1 className="SloganBeginning">
-          A community driven by&nbsp;
+       {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
+       <br/>
           <span id="welcome-typewriter-placeholder">inspiration.</span>
         </h1>
       </span>
@@ -66,16 +67,20 @@ const SloganBeginning = (props) => {
   if (props.width <= 370) {
     return (
       <h1 className="SloganBeginning">
-        A community driven by&nbsp;{props.children}
+       {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
+       <br/>
+        <br />
+        A School that offers&nbsp;{props.children}
       </h1>
     );
     // <= 600px (larger phones)
   } else if (props.width <= 600) {
     return (
       <h1 className="SloganBeginning">
-        A community driven
+       {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
+       <br/>
         <br />
-        by&nbsp;
+        A School that offers&nbsp;
         {props.children}
       </h1>
     );
@@ -83,8 +88,10 @@ const SloganBeginning = (props) => {
   } else if (props.width <= 910) {
     return (
       <h1 className="SloganBeginning">
-        A community driven by
+       {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
+       <br/>
         <br />
+        A School that offers&nbsp;
         {props.children}
       </h1>
     );
@@ -92,9 +99,10 @@ const SloganBeginning = (props) => {
     // > 910px (larger tablets and laptops)
     return (
       <h1 className="SloganBeginning">
-        A community driven
+       {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
+       <br/>
         <br />
-        by&nbsp;
+        A School that offers&nbsp;
         {props.children}
       </h1>
     );
@@ -111,12 +119,12 @@ const TypewriterWelcome = () => {
 
   // Strings for the typewriter effect to cycle through
   const strings = [
-    'inspiration.',
-    'collaboration.',
-    'diversity.',
-    'passion.',
-    'creativity.',
-    'learning.',
+    'Discipline',
+    'Knowledge',
+    'Visualization',
+    'Playing',
+    'Creativity.',
+    'Learning.',
   ];
 
   const typewriterInit = (typewriter) => {

@@ -20,11 +20,13 @@ const Contact = () => {
   };
 
   return (
+    <div className="contactbg">
     <div className="Contact">
       <article>
         <Header width={width} />
         <ContactForm />
       </article>
+    </div>
     </div>
   );
 };
