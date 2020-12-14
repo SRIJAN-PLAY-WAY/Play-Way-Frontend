@@ -81,5 +81,6 @@ to = "/"
 status = 200
 
 [build]
+CI='' npm run build
 command = "npm run build"
 publish = "build"
