@@ -70,7 +70,7 @@ const SloganBeginning = (props) => {
        {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
        <br/>
         <br />
-        A School that offers&nbsp;{props.children}
+        A School that offers <br/>{props.children}
       </h1>
     );
     // <= 600px (larger phones)
@@ -80,7 +80,7 @@ const SloganBeginning = (props) => {
        {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
        <br/>
         <br />
-        A School that offers&nbsp;
+        A School that offers <br/>
         {props.children}
       </h1>
     );
@@ -91,7 +91,7 @@ const SloganBeginning = (props) => {
        {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
        <br/>
         <br />
-        A School that offers&nbsp;
+        A School that offers <br/>
         {props.children}
       </h1>
     );
@@ -102,7 +102,7 @@ const SloganBeginning = (props) => {
        {/*  <div style={{color:'red'}}>SRIJAN PLAY WAY</div> */}
        <br/>
         <br />
-        A School that offers&nbsp;
+        A School that offers <br/>
         {props.children}
       </h1>
     );
