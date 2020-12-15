@@ -2,7 +2,7 @@ nav.navbar-main {
   // Mobile styles
 
   position: fixed;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   width: 100%;
   z-index: 900;
   top: 0;
@@ -11,11 +11,11 @@ nav.navbar-main {
   background-color: #fff;
   background-image: url('../../assets/images/cloud.jpg');
   background-size: contain;
-  border-bottom:4px dashed aqua;
+  border-bottom:1px solid gray;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 
   .navbar-main-items {
-    margin: 0 5%;
+    margin: 0 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,19 +26,19 @@ nav.navbar-main {
       text-decoration: none;
       align-items: center;
 
-      img {
+     /*  img {
         height: 2.5rem;
-        width: 2.5rem;
-      }
+        width: 3rem;
+      } */
 
-      p {
+      /* p {
         margin: 0 0 0 0.5rem;
         font-size: 1rem;
         font-family: 'Raleway', sans-serif;
         font-weight: bold;
         color: #000;
         line-height: 1.2;
-      }
+      } */
     }
 
     // Hide Navbar on mobile
@@ -73,7 +73,7 @@ nav.navbar-main {
 
       // Logo area
       .nav-logo{
-        padding: 0.4rem;
+        padding: 0.1rem;
         background-color:#4d5eff;
         border-radius: 2%;
       }

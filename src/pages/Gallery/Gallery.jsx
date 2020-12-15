@@ -9,7 +9,7 @@ const Gallery = () => {
     <div className="gallerybg">
     <div className="page-styles Gallery">
       <h2>Gallery</h2>
-    <Carousel >
+    <Carousel className="gallery-section">
    <Carousel.Item interval={1000}>
     <img
       className="d-block w-100 image"
@@ -35,7 +35,28 @@ const Gallery = () => {
   <Carousel.Item>
     <img
       className="d-block w-100 image"
-      src={require('../../assets/images/bg2.jpg')}
+      src={require('../../assets/images/bg1.png')}
+      alt="Third slide"
+    />
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100 image"
+      src={require('../../assets/images/bee.png')}
+      alt="Third slide"
+    />
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item><Carousel.Item>
+    <img
+      className="d-block w-100 image"
+      src={require('../../assets/images/tom.png')}
       alt="Third slide"
     />
     <Carousel.Caption>

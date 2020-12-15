@@ -13,11 +13,11 @@ const Navigation = () => {
       <div className="navbar-main-items">
         <div className="nav-logo">
           <Link to="/">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" style={{width:'6rem',height:'3.5rem'}} />
             {/* eslint-disable-next-line */}
-            <p role="text">
+           {/*  <p role="text">
               Srijan Play Way <br /> 
-            </p>
+            </p> */}
           </Link>
         </div>
 

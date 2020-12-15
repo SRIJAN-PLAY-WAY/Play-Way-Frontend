@@ -8,10 +8,10 @@
   .bm-menu {
     border-radius: 10px 0 0 10px;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #4053fe;
     background-image: url('../../../assets/images/penguin.png');
     background-size: cover;
-    padding: 1rem;
+    padding: 0.5rem;
 
     // Includes both the top group and the join button
     .bm-item-list {
@@ -31,10 +31,13 @@
           align-items: center;
           outline: none;
           margin-bottom: 2rem;
-
+          margin-left: 0.5rem;
           // The logo combo with the logo image and text
+          .nav-mobile-logo{
+        border: 1px solid gray;
+          }
           .nav-mobile-logo a {
-            padding-left: 0.5rem;
+            
             display: flex;
             flex-direction: row;
             text-decoration: none;

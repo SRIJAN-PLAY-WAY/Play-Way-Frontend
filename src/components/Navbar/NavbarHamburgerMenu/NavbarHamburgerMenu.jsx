@@ -21,10 +21,10 @@ const NavbarHamburgerMenu = () => {
           <div className="nav-mobile-logo-and-close-menu">
             <div className="nav-mobile-logo">
               <Link to="/" onClick={context.toggleMenu}>
-                <img src={logo} alt="Brooklyn College Computer Science Club" />
-                <p>
+                <img src={logo} alt="Srijan Play Way" style={{width:'5rem',height:'3rem'}} />
+                {/* <p>
                  Srijan Play Way <br /> 
-                </p>
+                </p> */}
               </Link>
             </div>
 
