@@ -1,6 +1,7 @@
 // @flow
 import React, { useState } from 'react';
 import {Tabs,Tab} from 'react-bootstrap'
+import  { Redirect,withRouter } from 'react-router-dom'
 import firebase from 'firebase';
 import './Join.scss';
 import Auth from './components/Auth';
@@ -19,7 +20,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-const Join = () => {
+const Join = ({history}) => {
   const [authError,setAuthError] = useState(null);
   const signup = (name,aadhar,std,email,password) => {
     console.log(email,password);
@@ -32,6 +33,8 @@ const Join = () => {
         console.log("User data :",signup.user.uid);
         localStorage.setItem('loggedin',true);
         localStorage.setItem('user',signup.user.email);
+        history.push('/')
+        window.location.reload();
        /*  console.log("storage data :",localStorage.getItem('user')); */
     })
     .catch(e =>{
@@ -55,6 +58,8 @@ const signin = (email,password) => {
         console.log("User data :",login.user.uid);
         localStorage.setItem('loggedin',true);
         localStorage.setItem('user',login.user.email);
+        history.push('/')
+        window.location.reload();
        /*  console.log("storage data :",localStorage.getItem('user')); */
     })
     
@@ -82,6 +87,8 @@ const google = () => {
           localStorage.setItem('loggedin',true);
           localStorage.setItem('user',result.user.email);
           console.log("storage data :",localStorage.getItem('user'));
+          history.push('/')
+          window.location.reload();         
       })
       .catch(e=>{
           var err = e.message;
@@ -91,7 +98,7 @@ const google = () => {
           setInterval(() => setAuthError(null),7000);
       });
      
-} //func
+}//func
 
   return (
     <section className="Join">
@@ -111,4 +118,4 @@ const google = () => {
   );
 };
 
-export default Join;
+export default withRouter(Join);

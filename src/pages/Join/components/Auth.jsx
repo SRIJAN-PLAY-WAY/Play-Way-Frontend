@@ -13,7 +13,7 @@ const Auth = ({type,google,signup,signin,authError}) =>{
   const [password,setPassword] = useState(null);
   const [password2,setPassword2] = useState(null);
   const [error,setError] = useState(null);
-  
+
   const handleSubmit = () => {
       if(email && validateEmail(email) && password && password === password2 && password.length > 5){
         if(type === 'signin'){
@@ -21,16 +21,16 @@ const Auth = ({type,google,signup,signin,authError}) =>{
             signin(email,password);
         }//if
         else{
-            if(name && name.match(/^[a-zA-Z]+$/) && aadhar && aadhar.length === 16 && std){
+            if(name && validateName(name) && aadhar && aadhar.length === 16 && std.length < 8){
             setError(null);
             signup(name,aadhar,std,email,password);
             }//if
             else{
-                if(!name && !aadhar && !std)
+                if(!name || !aadhar || !std)
                 setError("Enter Name,Aadhar and Select Standard.")
                 else if(std.length > 7)
                 setError('Select Standard.')
-                else if(!name.match(/^[a-zA-Z]+$/))
+                else if(!validateName(name))
                 setError('Invalid Name.');
                 else if(aadhar.length !== 16)
                 setError("Aadhar Number should have 16 digits only.")
@@ -54,6 +54,10 @@ const validateEmail = (email) => {
     return re.test(String(email).toLowerCase());
 }//func
 
+const validateName = (name) => {
+        var regex = /^[a-zA-Z ]{2,30}$/;
+        return regex.test(name);
+}
     return (
       <div>
           {(error || authError)?<div className="error">*&nbsp;{error}{authError}</div>:null}

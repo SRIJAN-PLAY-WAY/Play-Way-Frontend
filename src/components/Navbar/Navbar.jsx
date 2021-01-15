@@ -1,13 +1,21 @@
 // @flow
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NavbarHamburgerMenuContext } from './NavbarHamburgerMenu/NavbarHamburgerMenuContext';
 import './Navbar.scss';
 import logo from 'assets/images/2.jpeg';
+import admission_form from 'assets/form/admission.pdf';
 
 const Navigation = () => {
   const context = useContext(NavbarHamburgerMenuContext);
+  const [loggedin,setLoggedIn] = useState(localStorage.getItem('loggedin'));
 
+  const logout = () => {
+    console.log("reached logout");
+    localStorage.removeItem('loggedin');
+    localStorage.removeItem('user');
+    setLoggedIn(null);
+  }
   return (
     <nav className="navbar-main">
       <div className="navbar-main-items">
@@ -34,14 +42,31 @@ const Navigation = () => {
               <Link to="/notices">Notices</Link>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              {
+              loggedin?
+              <Link to="/gallery">Gallery</Link>:
+              null
+              } 
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+            {
+             loggedin?
+              <Link to="/contact">Contact</Link>:
+              null
+              } 
             </li>
-
             <li className="join-button">
-              <Link to="/join">Join the School</Link>
+            {
+             loggedin?null:
+             <Link to={admission_form} target="_blank">Download Admission Form</Link>
+             } 
+            </li>
+            <li className="join-button">
+             {
+             loggedin?
+             <Link to="#" onClick={() => logout()}>Logout</Link>:
+             <Link to="/join">Login / Signup</Link>
+             } 
             </li>
           </ul>
         </nav>
