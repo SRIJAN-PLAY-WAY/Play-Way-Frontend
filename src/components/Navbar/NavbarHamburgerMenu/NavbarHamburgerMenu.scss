@@ -1,5 +1,6 @@
 .NavbarHamburgerMenu {
   // Hides the button it comes with and uses the navbar button instead
+  overflow-x: hidden;
   .bm-burger-button {
     display: none;
   }
