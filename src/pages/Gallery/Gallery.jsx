@@ -3,12 +3,14 @@ import {Carousel} from 'react-bootstrap'
 import Ending from '../../components/Ending'
 import '../page-styles.scss';
 import './Gallery.scss';
+import Top from '../Top'
 
 const Gallery = () => {
   return (
     <div className="gallerybg">
+      <Top title="Gallery" />
     <div className="page-styles Gallery">
-      <h2>Gallery</h2>
+      <div className="head">Preschool Gallery</div>
     <Carousel className="gallery-section">
    <Carousel.Item interval={1000}>
     <img

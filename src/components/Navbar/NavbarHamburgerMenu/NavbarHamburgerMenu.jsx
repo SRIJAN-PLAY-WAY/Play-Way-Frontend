@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { NavbarHamburgerMenuContext } from './NavbarHamburgerMenuContext';
 import './NavbarHamburgerMenu.scss';
 import { Link } from 'react-router-dom';
 import logo from 'assets/images/2.jpeg';
+import admission_form from 'assets/form/admission.pdf';
 
 const NavbarHamburgerMenu = () => {
+  const [loggedin,setLoggedIn] = useState(localStorage.getItem('loggedin'));
   const context = useContext(NavbarHamburgerMenuContext);
+
+  const signout = () => {
+    console.log("reached logout");
+    localStorage.removeItem('loggedin');
+    localStorage.removeItem('user');
+    setLoggedIn(null);
+  }//func
 
   return (
     <div className="NavbarHamburgerMenu">
@@ -42,7 +51,7 @@ const NavbarHamburgerMenu = () => {
             </div>
           </div>
 
-          <ul className="nav-mobile-links">
+          <ul className="nav-mobile-links" style={{fontWeight:'700'}}>
             <li>
               <Link to="/about" onClick={context.toggleMenu}>
                 About Us
@@ -59,25 +68,55 @@ const NavbarHamburgerMenu = () => {
               </Link>
             </li>
             <li>
+            {
+              loggedin?
               <Link to="/gallery" onClick={context.toggleMenu}>
                 Gallery
-              </Link>
+              </Link>:
+              null
+              } 
             </li>
             <li>
+              {
+              loggedin?
               <Link to="/contact" onClick={context.toggleMenu}>
                 Contact
-              </Link>
+              </Link>:
+              null
+              } 
             </li>
           </ul>
         </div>
 
-        <Link
+        {
+          loggedin?
+          <Link
           className="nav-mobile-join-button"
-          to="/join"
-          onClick={context.toggleMenu}
+          to={admission_form}
+          target="_blank"
         >
-          Join the School
-        </Link>
+          Download Admission Form
+        </Link>:null
+        }
+        {
+          loggedin? 
+          <Link
+          className="nav-mobile-join-button"
+          to="#"
+          onClick={() => signout()}
+          style={{backgroundColor:'red'}}
+          >
+           Signout
+          </Link>:
+          <Link
+            className="nav-mobile-join-button"
+            to="/join"
+            onClick={context.toggleMenu}
+            style={{backgroundColor:'green'}}
+          >
+            Login / Signup
+          </Link>
+        }
       </Menu>
     </div>
   );

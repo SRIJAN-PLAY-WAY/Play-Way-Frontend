@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Top from './components/Top';
+import Top from '../Top';
 import WhoWeAre from './components/WhoWeAre';
 import WhatWeDo from './components/WhatWeDo';
 import Team from './components/Team';
@@ -24,7 +24,7 @@ const About = () => {
   return (
     <div className="About">
       <article>
-        <Top />
+        <Top title="About Us"/>
         <WhoWeAre />
         <WhatWeDo />
         <Team />

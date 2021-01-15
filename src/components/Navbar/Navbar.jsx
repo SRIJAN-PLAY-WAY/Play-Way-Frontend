@@ -1,5 +1,5 @@
 // @flow
-import React, { useContext,useState } from 'react';
+import React, { useContext,useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NavbarHamburgerMenuContext } from './NavbarHamburgerMenu/NavbarHamburgerMenuContext';
 import './Navbar.scss';
@@ -10,8 +10,8 @@ const Navigation = () => {
   const context = useContext(NavbarHamburgerMenuContext);
   const [loggedin,setLoggedIn] = useState(localStorage.getItem('loggedin'));
 
-  const logout = () => {
-    console.log("reached logout");
+  const signout = () => {
+    console.log("reached signout");
     localStorage.removeItem('loggedin');
     localStorage.removeItem('user');
     setLoggedIn(null);
@@ -57,15 +57,16 @@ const Navigation = () => {
             </li>
             <li className="join-button">
             {
-             loggedin?null:
-             <Link to={admission_form} target="_blank">Download Admission Form</Link>
+             loggedin?
+             <Link to={admission_form} target="_blank">Download Admission Form</Link>:
+             null
              } 
             </li>
             <li className="join-button">
              {
              loggedin?
-             <Link to="#" onClick={() => logout()}>Logout</Link>:
-             <Link to="/join">Login / Signup</Link>
+             <Link style={{backgroundColor:'red'}} to="#" onClick={() => signout()}>Signout</Link>:
+             <Link style={{backgroundColor:'green'}} to="/join">Login / Signup</Link>
              } 
             </li>
           </ul>

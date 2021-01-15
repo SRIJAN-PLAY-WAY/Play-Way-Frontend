@@ -6,6 +6,7 @@ import '../page-styles.scss';
 import './Events.scss';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Top from '../Top';
 
 const Events = () => {
   const [eventsAreDownloaded, setEventsAreDownloaded] = useState(false);
@@ -33,6 +34,7 @@ const Events = () => {
 
   return (
     <div className="eventbg">
+      <Top title="Events" />
     <div className="page-styles Events">
       {/* Fix footer flashing in while events are loading */}
       {!eventsAreDownloaded && (

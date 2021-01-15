@@ -1,8 +1,9 @@
 .about-top {
   // Mobile styles
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  url('../../../../assets/images/space.jpg');
+  background-image: /* linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), */
+  url('../../assets/images/rainbow.jpg');
   background-size: cover;
+  border-bottom: 2px solid gray;
   background-repeat: no-repeat;
 
   .about-top-container {
@@ -11,14 +12,17 @@
     flex-direction: column;
   }
 
-  h1 {
-    margin: 1rem auto 12.5%;
+  .heading{
+    margin: 1rem ;
+    width: 40%;
+    align-self: center;
     color: #fff;
     font-family: 'Raleway', sans-serif;
-    font-size: 2.25rem;
+    font-size: 5vw;
     font-weight: bolder;
     text-align: center;
-    background-color: crimson;
+    border-radius: '4%';
+    background-color: navy;
     padding: 1rem;
     border-radius: 3%;
     // 352px (Small phones)
@@ -61,8 +65,8 @@
 
   // Small landscape phones
   @media screen and (orientation: landscape) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../../../../assets/images/kids.jpg');
+    background-image: /* linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), */
+    url('../../assets/images/rainbow.jpg');
 
     .about-top-container {
       padding: 5vw 6.25vw;
@@ -86,8 +90,8 @@
   // 700px (vertical tablets and horizontal phones)
   // Landscape and tablet optimized layout
   @media screen and (min-width: 43.75rem) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../../../../assets/images/kids.jpg');
+    background-image: /* linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), */
+    url('../../assets/images/rainbow.jpg');
 
     h1 {
       margin-bottom: 7.5%;
@@ -103,8 +107,8 @@
 
     // Large landscape phones
     @media screen and (orientation: landscape) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url('../../../../assets/images/kids.jpg');
+      background-image: /* linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), */
+      url('../../assets/images/rainbow.jpg');
       padding: 0;
 
       .about-top-container {

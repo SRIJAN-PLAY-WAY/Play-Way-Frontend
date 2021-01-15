@@ -8,7 +8,7 @@ const Ending = ({ width }) => {
     <section className="Ending">
       <div className="ending-container">
         <EndingText width={width} />
-        <Link to="/join">Join the School</Link>
+       {/*  <Link to="/join">Download the Admission Form</Link> */}
       </div>
     </section>
   );
@@ -18,19 +18,19 @@ const EndingText = ({ width }) => {
   if (width < 700) {
     // Vertical phones
     return (
-      <h2>
+      <div className="banner">
         Unlock your child's full potential at Srijan Play Way.
-      </h2>
+      </div>
     );
   } else {
     // Landscape phones, tablets and desktops
     return (
       // eslint-disable-next-line
-      <h2 role="text">
+      <div className="banner" role="text">
         Unlock your child's full potential at 
         <br />
         Srijan Play Way.
-      </h2>
+      </div>
     );
   }
 };

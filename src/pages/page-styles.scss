@@ -1,5 +1,6 @@
 .gallerybg{
-  background-image: url('../assets/images/space.png');
+  /* background-image: url('../assets/images/space.png'); */
+  background-color: #EBF0E3;
   background-size: contain;
 }
 .page-styles {
@@ -16,14 +17,14 @@
     text-align: center;
   }
 
-  h2 {
+  .head {
     font-family: 'Raleway', sans-serif;
     text-align: center;
-    font-size: 3.2rem;
-    margin-bottom: 2vh;
+    font-size: 3.4rem;
+    margin-bottom: 5vh;
     font-weight: bolder;
-    color: darkblue;
-    background-color:aqua;
+    color: black;
+   /*  background-color:aqua; */
     border-radius: 3%;
   }
 

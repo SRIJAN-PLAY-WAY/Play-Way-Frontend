@@ -6,14 +6,16 @@ import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
 import '../page-styles.scss';
 import './Notices.scss';
+import Top from '../Top';
 
 const Notices = () => {
   return (
     <div className="noticebg">
+      <Top title="Notices" />
     <div className="page-styles Notices">
-      <div style={{fontWeight:'bolder',color:'red',fontSize:'3.4rem',textAlign:'center',margin:'1rem'}}>Notices</div>
+      <div style={{fontWeight:'bolder',color:'black',fontSize:'3.4rem',textAlign:'center',margin:'1rem'}}>Latest Notices and Information</div>
       <Accordion >
-          <Card bg="primary" border="warning" text="light">
+          <Card bg="primary" border="warning" text="light" style={{boxShadow:'7px 12px gray'}}>
             <Card.Header>
               <Accordion.Toggle style={{color:"white",fontWeight:'bolder',fontSize:'1.5rem',textDecoration:"none"}} as={Button} variant="link" eventKey="0">
                 Notice Title
@@ -24,7 +26,7 @@ const Notices = () => {
             </Accordion.Collapse>
           </Card>
           <br/>
-          <Card bg="primary" border="warning" text="light">
+          <Card bg="primary" border="warning" text="light" style={{boxShadow:'5px 10px #888888'}} >
             <Card.Header>
               <Accordion.Toggle style={{color:"white",fontWeight:'bolder',fontSize:'1.5rem',textDecoration:"none"}} as={Button} variant="link" eventKey="1">
                 Notice Title
@@ -35,7 +37,7 @@ const Notices = () => {
             </Accordion.Collapse>
           </Card>
           <br/>
-          <Card bg="primary" border="warning" text="light">
+          <Card bg="primary" border="warning" text="light" style={{boxShadow:'5px 10px #888888'}}>
             <Card.Header>
               <Accordion.Toggle style={{color:"white",fontWeight:'bolder',fontSize:'1.5rem',textDecoration:"none"}} as={Button} variant="link" eventKey="2">
                 Notice Title
@@ -46,7 +48,7 @@ const Notices = () => {
             </Accordion.Collapse>
           </Card>
           <br/>
-          <Card bg="primary" border="warning" text="light">
+          <Card bg="primary" border="warning" text="light" style={{boxShadow:'5px 10px #888888'}}>
             <Card.Header>
               <Accordion.Toggle style={{color:"white",fontWeight:'bolder',fontSize:'1.5rem',textDecoration:"none"}} as={Button} variant="link" eventKey="3">
                 Notice Title
@@ -57,7 +59,7 @@ const Notices = () => {
             </Accordion.Collapse>
           </Card>
           <br/>
-          <Card bg="primary" border="warning" text="light">
+          <Card bg="primary" border="warning" text="light" style={{boxShadow:'5px 10px #888888'}}>
             <Card.Header>
               <Accordion.Toggle style={{color:"white",fontWeight:'bolder',fontSize:'1.5rem',textDecoration:"none"}} as={Button} variant="link" eventKey="4">
                 Notice Title
