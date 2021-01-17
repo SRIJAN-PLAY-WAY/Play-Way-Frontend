@@ -2,10 +2,9 @@ import React,{useState,useEffect} from 'react';
 import {Form,Button,Dropdown,DropdownButton} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import '../Join.scss';
-
 import { FcGoogle } from 'react-icons/fc';
 
-const Auth = ({type,google,signup,signin,authError}) =>{
+const Auth = ({type,google,signup,signin,authError,setOverlay}) =>{
   const [name, setName] = useState(null);
   const [aadhar, setAadhar] = useState(null);
   const [std, setStd] = useState('Select Standard');
@@ -14,7 +13,12 @@ const Auth = ({type,google,signup,signin,authError}) =>{
   const [password2,setPassword2] = useState(null);
   const [error,setError] = useState(null);
 
+  if(authError){
+      setOverlay(false);
+  }
+
   const handleSubmit = () => {
+      setOverlay(true);
       if(email && validateEmail(email) && password && password === password2 && password.length > 5){
         if(type === 'signin'){
             setError(null);
@@ -26,6 +30,7 @@ const Auth = ({type,google,signup,signin,authError}) =>{
             signup(name,aadhar,std,email,password);
             }//if
             else{
+                setOverlay(false);
                 if(!name || !aadhar || !std)
                 setError("Enter Name,Aadhar and Select Standard.")
                 else if(std.length > 7)
@@ -38,6 +43,7 @@ const Auth = ({type,google,signup,signin,authError}) =>{
         }//else
       }//if
       else{
+            setOverlay(false);
             if(!email || !password || !password2)
             setError("Enter Email and Password.")
             else if(!validateEmail(email))

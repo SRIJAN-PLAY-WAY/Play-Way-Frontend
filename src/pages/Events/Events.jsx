@@ -6,6 +6,7 @@ import '../page-styles.scss';
 import './Events.scss';
 import Top from '../Top';
 import firebase from '../../utils/firebase';
+import {Spinner} from 'react-bootstrap'
 
 const Events = () => {
   const [events, setEvents] = useState(null);
@@ -33,7 +34,7 @@ const Events = () => {
       <Top title="Events" />
     <div className="page-styles Events">
       {
-        events && events.length > 0 &&
+        events && events.length > 0 ?
         events.map((type,i) => {
           for(let key in type){
             var str = key.slice(0,key.length-5) + " " + key.slice(key.length-5) + " Events";
@@ -46,7 +47,10 @@ const Events = () => {
               <EventCard eventdata={type[key]} />
              </div>
           )}//for
-        })
+        }):
+        <center style={{marginTop:'5%'}}>
+        <Spinner animation="border" role="status" />
+        </center>
       }
     </div>
     <Ending />

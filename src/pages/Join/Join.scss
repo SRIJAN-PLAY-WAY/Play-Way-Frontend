@@ -10,14 +10,13 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-
+    overflow: hidden;
     .join-container {
       padding: 3rem 3rem;
       width: 90vmin;
       background-color: #F0F4F7;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       border-radius: 10px;
-
     }}}
 
     .tab-title{
@@ -35,3 +34,4 @@
       color:red;
       font-weight: 400;
     }
+    

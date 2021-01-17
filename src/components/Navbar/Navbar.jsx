@@ -1,12 +1,12 @@
 // @flow
 import React, { useContext,useState,useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,withRouter } from 'react-router-dom';
 import { NavbarHamburgerMenuContext } from './NavbarHamburgerMenu/NavbarHamburgerMenuContext';
 import './Navbar.scss';
 import logo from 'assets/images/2.jpeg';
 import admission_form from 'assets/form/admission.pdf';
 
-const Navigation = () => {
+const Navigation = ({history}) => {
   const context = useContext(NavbarHamburgerMenuContext);
   const [loggedin,setLoggedIn] = useState(localStorage.getItem('loggedin'));
 
@@ -15,6 +15,7 @@ const Navigation = () => {
     localStorage.removeItem('loggedin');
     localStorage.removeItem('user');
     setLoggedIn(null);
+    history.push('/')
   }
   return (
     <nav className="navbar-main">
@@ -36,7 +37,11 @@ const Navigation = () => {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <Link to="/events">Events</Link>
+            {
+              loggedin?
+              <Link to="/events">Events</Link>:
+               null
+              }
             </li>
             <li>
               <Link to="/notices">Notices</Link>
@@ -100,4 +105,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default withRouter(Navigation);

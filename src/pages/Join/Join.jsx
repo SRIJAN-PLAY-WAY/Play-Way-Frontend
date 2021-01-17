@@ -5,9 +5,16 @@ import  { Redirect,withRouter } from 'react-router-dom'
 import './Join.scss';
 import Auth from './components/Auth';
 import firebase from '../../utils/firebase';
+import LoadingOverlay from 'react-loading-overlay';
 
 const Join = ({history}) => {
   const [authError,setAuthError] = useState(null);
+  const [showLoader,setShowLoader] = useState(false);
+
+  const setOverlay = (val) => {
+    setShowLoader(val);
+  }//func
+
   const signup = (name,aadhar,std,email,password) => {
     console.log(email,password);
     const auth = firebase.auth();
@@ -89,16 +96,22 @@ const google = () => {
   return (
     <section className="Join">
        <div className="join-flex-container">
-        <div className="join-container">
+       <LoadingOverlay
+          active={showLoader}
+          spinner
+          text='Authenticating...'
+        >
+        <div className="join-container"> 
         <Tabs defaultActiveKey="signin" id="uncontrolled-tab-example" style={{backgroundColor:'#82CFD5',borderRadius:'3%',border:'1px solid black',boxShadow:'6px 10px darkblue'}}>
           <Tab eventKey="signin"  title={<div className="tab-title">Sign In</div>}>
-            <Auth type="signin" google={google} signin={signin} authError={authError} />
+            <Auth setOverlay={setOverlay} type="signin" google={google} signin={signin} authError={authError} />
           </Tab>
           <Tab eventKey="signup" title={<div className="tab-title">Sign Up</div>}>
-            <Auth type="signup" google={google} signup={signup} authError={authError} />
+            <Auth setOverlay={setOverlay} type="signup" google={google} signup={signup} authError={authError} />
           </Tab>
         </Tabs>
         </div>
+       </LoadingOverlay>
        </div>
     </section>
   );
