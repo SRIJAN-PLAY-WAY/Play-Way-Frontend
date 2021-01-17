@@ -58,9 +58,13 @@ const NavbarHamburgerMenu = () => {
               </Link>
             </li>
             <li>
+            {
+              loggedin?
               <Link to="/events" onClick={context.toggleMenu}>
                 Events
-              </Link>
+              </Link>:
+              null
+            }
             </li>
             <li>
               <Link to="/notices" onClick={context.toggleMenu}>
