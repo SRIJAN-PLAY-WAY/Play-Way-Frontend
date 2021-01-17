@@ -22,9 +22,9 @@ const Welcome = (props) => {
               experience or major.
             </p> */}
             <div className="welcome-action-buttons">
-              <Link className="join-button" to="/join">
+              {/* <Link className="join-button" to="/join">
                 Join&nbsp;the&nbsp;School
-              </Link>
+              </Link> */}
             {/*   <Link className="learn-more" to="/about">
                 Learn More
               </Link> */}
