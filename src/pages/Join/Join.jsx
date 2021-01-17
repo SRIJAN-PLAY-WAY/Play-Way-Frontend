@@ -2,23 +2,9 @@
 import React, { useState } from 'react';
 import {Tabs,Tab} from 'react-bootstrap'
 import  { Redirect,withRouter } from 'react-router-dom'
-import firebase from 'firebase';
 import './Join.scss';
 import Auth from './components/Auth';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyD1IVmSMWFElv-BoX74SqGTfTOFXj-USAQ",
-  authDomain: "playway-4de62.firebaseapp.com",
-  databaseURL: "https://playway-4de62.firebaseio.com",
-  projectId: "playway-4de62",
-  storageBucket: "playway-4de62.appspot.com",
-  messagingSenderId: "456674711143",
-  appId: "1:456674711143:web:605a6ad40aef4440fbe6c2",
-  measurementId: "G-5VDP6BHJ15"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+import firebase from '../../utils/firebase';
 
 const Join = ({history}) => {
   const [authError,setAuthError] = useState(null);

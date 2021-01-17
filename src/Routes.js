@@ -10,6 +10,7 @@ import WelcomeJoin from 'pages/WelcomeJoin';
 import EventPage from 'pages/EventPage';
 import Gallery from 'pages/Gallery';
 import Contact from 'pages/Contact';
+import Holidays from 'pages/Holidays';
 
 const Routes = () => {
   return (
@@ -40,6 +41,9 @@ const Routes = () => {
       </Route>
       <Route exact path="/">
         <Home />
+      </Route>
+      <Route path="/holidays">
+        <Holidays />
       </Route>
     </Switch>
   );

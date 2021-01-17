@@ -77,6 +77,15 @@ const NavbarHamburgerMenu = () => {
               } 
             </li>
             <li>
+            {
+              loggedin?
+              <Link to="/holidays" onClick={context.toggleMenu}>
+                Holidays
+              </Link>:
+              null
+              } 
+            </li>
+            <li>
               {
               loggedin?
               <Link to="/contact" onClick={context.toggleMenu}>
@@ -94,9 +103,9 @@ const NavbarHamburgerMenu = () => {
           className="nav-mobile-join-button"
           to={admission_form}
           target="_blank"
-        >
+          >
           Download Admission Form
-        </Link>:null
+          </Link>:null
         }
         {
           loggedin? 

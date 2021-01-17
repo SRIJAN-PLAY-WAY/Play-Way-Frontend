@@ -49,6 +49,13 @@ const Navigation = () => {
               } 
             </li>
             <li>
+              {
+              loggedin?
+              <Link to="/holidays">Holidays</Link>:
+              null
+              } 
+            </li>
+            <li>
             {
              loggedin?
               <Link to="/contact">Contact</Link>:

@@ -1,3 +1,3 @@
-import Event from './Event.jsx';
+import EventCard from './EventCard.jsx';
 
-export default Event;
+export default EventCard;

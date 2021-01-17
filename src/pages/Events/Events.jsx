@@ -1,64 +1,53 @@
 import React from 'react';
-import axios from 'axios';
-import Event from './components/Event';
+import { useEffect,useState } from 'react';
+import EventCard from './components/EventCard';
 import Ending from '../../components/Ending'
 import '../page-styles.scss';
 import './Events.scss';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import Top from '../Top';
+import firebase from '../../utils/firebase';
 
 const Events = () => {
-  const [eventsAreDownloaded, setEventsAreDownloaded] = useState(false);
-  const [upcomingEvents, setUpcomingEvents] = useState({});
-  const [pastEvents, setPastEvents] = useState([]);
-
-  const createEvent = (eventData) => {
-    return (
-      <Event
-        title={eventData.title}
-        name={eventData.name}
-        id={eventData.id}
-        key={eventData.id}
-      />
-    );
-  };
+  const [events, setEvents] = useState(null);
+  const [eventsAreDownloaded,setEventsAreDownloaded] = useState(false);
 
   useEffect(() => {
-    axios.get('/data/events/events-list-categorized.json').then((res) => {
-      setUpcomingEvents(res.data.upcomingEvents);
-      setPastEvents(res.data.pastEvents);
-      setEventsAreDownloaded(true);
-    });
+     getEvents();
   }, []);
+
+  const getEvents = async () => {
+     await firebase.database().ref('Events').once('value',(snapshot) => {
+      var eventdata = [];
+      snapshot.forEach((data) => {
+         var res = [];
+         data.forEach((value) => {res.push(value.val())});
+         eventdata.push({[data.key]:res});
+      });
+      setEvents(eventdata);
+      /* console.log("Events are :",eventdata); */
+    });
+  }//func
 
   return (
     <div className="eventbg">
       <Top title="Events" />
     <div className="page-styles Events">
-      {/* Fix footer flashing in while events are loading */}
-      {!eventsAreDownloaded && (
-        <div className="Events-loading-placeholder"></div>
-      )}
-
-      <section className="Events-upcoming">
-        <h1>Upcoming Events</h1>
-
-        {/* TODO: Dynamically generate per month */}
-        {/* <h2 className="Events-banners-month">October</h2> */}
-        <section className="Events-banners">
-          {eventsAreDownloaded &&
-            upcomingEvents.october.events.map((event) => createEvent(event))}
-        </section>
-      </section>
-
-      <section className="Events-past">
-        <h2>Past Events</h2>
-
-        <section className="Events-banners">
-          {eventsAreDownloaded && pastEvents.map((event) => createEvent(event))}
-        </section>
-      </section>
+      {
+        events && events.length > 0 &&
+        events.map((type,i) => {
+          for(let key in type){
+            var str = key.slice(0,key.length-5) + " " + key.slice(key.length-5) + " Events";
+          return (
+             <div key={key+i}>
+              <center>
+                <div className="heading">{str}</div>
+              </center>
+              <hr style={{border:'1px solid navy'}} />
+              <EventCard eventdata={type[key]} />
+             </div>
+          )}//for
+        })
+      }
     </div>
     <Ending />
     </div>
