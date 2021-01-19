@@ -104,7 +104,7 @@ const NavbarHamburgerMenu = () => {
         {
           loggedin?
           <Link
-          className="nav-mobile-join-button"
+          className="nav-mobile-button download"
           to={admission_form}
           target="_blank"
           >
@@ -114,18 +114,16 @@ const NavbarHamburgerMenu = () => {
         {
           loggedin? 
           <Link
-          className="nav-mobile-join-button"
+          className="nav-mobile-button signout"
           to="#"
           onClick={() => signout()}
-          style={{backgroundColor:'red'}}
           >
            Signout
           </Link>:
           <Link
-            className="nav-mobile-join-button"
+            className="nav-mobile-button signin"
             to="/join"
             onClick={context.toggleMenu}
-            style={{backgroundColor:'green'}}
           >
             Login / Signup
           </Link>

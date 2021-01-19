@@ -96,11 +96,10 @@
       }
 
       // Join button
-      .nav-mobile-join-button {
+      .nav-mobile-button {
         margin: 0 1rem 1rem;
         padding: 1rem 2.5rem;
         border-radius: 50px;
-        background-color: #4d5eff;
         text-align: center;
         text-decoration: none;
         color: #fff;
@@ -111,15 +110,52 @@
         transition-timing-function: ease-in-out;
       }
 
-      .nav-mobile-join-button:hover {
+      //download button
+      .download {
         background-color: #4d5eff;
+      }
+
+      .download:hover {
+        background-color: darkblue;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       }
 
-      .nav-mobile-join-button:active {
-        background-color: #6574f7;
+      .download:active {
+        background-color: darkblue;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }//download button
+
+      //signin button
+      .signin {
+        background-color:green;
+      }
+
+      .signin:hover {
+        background-color: #5EDC1F;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .signin:active {
+        background-color: #5EDC1F;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
+      //signin button
+
+       //signout button
+       .signout {
+        background-color:#CF3633;
+      }
+
+      .signout:hover {
+        background-color: orangered;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .signout:active {
+        background-color: orangered;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      //signout button
     }
   }
 

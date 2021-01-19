@@ -67,20 +67,21 @@ const Navigation = ({history}) => {
               null
               } 
             </li>
-            <li className="join-button">
+            <li className="button download">
             {
              loggedin?
              <Link to={admission_form} target="_blank">Download Admission Form</Link>:
              null
              } 
             </li>
-            <li className="join-button">
              {
              loggedin?
-             <Link style={{backgroundColor:'red'}} to="#" onClick={() => signout()}>Signout</Link>:
-             <Link style={{backgroundColor:'green'}} to="/join">Login / Signup</Link>
-             } 
+             <li className="button signout">
+             <Link  to="#" onClick={() => signout()}>Signout</Link></li>:
+             <li className="button signin">
+             <Link  to="/join">Login / Signup</Link>
             </li>
+             } 
           </ul>
         </nav>
 
